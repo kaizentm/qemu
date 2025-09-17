@@ -20,6 +20,7 @@ Packaging the latest (at time of writing) version of qemu that is not available 
     --disable-xen \
     --disable-vnc-jpeg \
     --enable-mshv \
+    --disable-strip \
     --disable-gtk
 cd build
 make -j

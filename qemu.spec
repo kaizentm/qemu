@@ -14,13 +14,16 @@ Packaging the latest (at time of writing) version of qemu that is not available 
 %prep
 %setup -q -n %{name}-%{version}
 
+%global __strip /usr/bin/true
+
 %build
 ./configure \
     --target-list=x86_64-softmmu \
     --disable-xen \
     --disable-vnc-jpeg \
     --enable-mshv \
-    --disable-gtk
+    --disable-gtk \
+    --prefix="install"
 cd build
 make -j
 
@@ -29,9 +32,8 @@ export DESTDIR=$RPM_BUILD_ROOT
 make install
 
 
-
 %files
-*
+install/*
 
 %doc
 

@@ -32,7 +32,7 @@ make install
 
 
 %files
-*
+/*
 
 %doc
 

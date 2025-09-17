@@ -35,6 +35,10 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(-,root,root,-)
 /usr/local/bin/
+/usr/local/libexec/
+/usr/local/share/locale/
+/usr/local/share/qemu/
+
 
 %doc
 

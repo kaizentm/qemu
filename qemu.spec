@@ -22,8 +22,7 @@ Packaging the latest (at time of writing) version of qemu that is not available 
     --disable-xen \
     --disable-vnc-jpeg \
     --enable-mshv \
-    --disable-gtk \
-    --prefix="$RPM_BUILD_ROOT/install"
+    --disable-gtk
 cd build
 make -j
 
@@ -33,7 +32,7 @@ make install
 
 
 %files
-install/*
+*
 
 %doc
 

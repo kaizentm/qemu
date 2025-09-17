@@ -30,19 +30,10 @@ export DESTDIR=$RPM_BUILD_ROOT
 make install
 
 
-%clean
-rm -rf $RPM_BUILD_ROOT
 
 %files
-%defattr(-,root,root,-)
-/usr/local/bin/*qemu*
-/usr/local/libexec/*qemu*
-/usr/local/share/qemu/
-/usr/local/share/doc/qemu
-/usr/local/share/applications
-/usr/local/share/icons
-/usr/local/libexec
-/usr/local/share/man
+*
+
 %doc
 
 %changelog

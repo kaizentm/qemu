@@ -23,7 +23,7 @@ Packaging the latest (at time of writing) version of qemu that is not available 
     --disable-vnc-jpeg \
     --enable-mshv \
     --disable-gtk \
-    --prefix="install"
+    --prefix="$RPM_BUILD_ROOT/install"
 cd build
 make -j
 

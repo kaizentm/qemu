@@ -25,7 +25,7 @@ cd build
 make -j
 
 %install
-%make_install
+make install
 
 %clean
 rm -rf $RPM_BUILD_ROOT

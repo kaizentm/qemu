@@ -35,7 +35,7 @@ rm -rf $RPM_BUILD_ROOT
 /usr/local/bin/*qemu*
 /usr/local/libexec/*qemu*
 /usr/local/share/locale/*qemu*
-/usr/local/share/qemu/*qemu*
+/usr/local/share/qemu/
 
 
 %doc

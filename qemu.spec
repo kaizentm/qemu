@@ -7,8 +7,6 @@ License:        GPLv2+
 URL:            https://www.qemu.org
 Source0:        qemu-%{version}.tar.xz
 
-BuildRequires:  gtk2-devel
-BuildArch:      x86_64
 
 %description
 Packaging the latest (at time of writing) version of qemu that is not available from Red Hat repository

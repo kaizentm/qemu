@@ -25,9 +25,12 @@ cd build
 make -j
 
 %install
-rm -rf $RPM_BUILD_ROOT 
+export DESTDIR=$RPM_BUILD_ROOT
 make install
 
+
+%clean
+rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(-,root,root,-)

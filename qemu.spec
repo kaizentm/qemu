@@ -87,8 +87,6 @@ rm -rf $RPM_BUILD_ROOT
 
 # --- Files sections ---
 
-%global qemu_moddir %{_libdir}/qemu
-
 %files
 %defattr(-,root,root,-)
 /usr/local/bin/

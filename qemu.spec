@@ -22,7 +22,29 @@ Packaging the latest (at time of writing) version of qemu that is not available 
     --disable-xen \
     --disable-vnc-jpeg \
     --enable-mshv \
-    --disable-gtk
+    --disable-strip \
+    --disable-sdl \
+    --disable-gtk \
+    --disable-opengl \
+    --disable-virglrenderer \
+    --disable-brlapi \
+    --disable-curl \
+    --disable-spice \
+    --disable-smartcard \
+    --disable-libssh \
+    --disable-libiscsi \
+    --disable-rbd \
+    --disable-rdma \
+    --disable-mpath \
+    --disable-libpmem \
+    --disable-usb-redir \
+    --disable-libusb \
+    --disable-curses \
+    --audio-drv-list= \
+    --disable-alsa \
+    --disable-pa \
+    --disable-jack \
+    --disable-sndio
 cd build
 make -j
 
@@ -35,7 +57,10 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(-,root,root,-)
-/
+/usr/local/bin/
+/usr/local/libexec/
+/usr/local/share
+
 
 %doc
 

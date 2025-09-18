@@ -89,46 +89,13 @@ rm -rf $RPM_BUILD_ROOT
 
 %global qemu_moddir %{_libdir}/qemu
 
-%files -n qemu-kvm-core
-%license COPYING
-%doc README* LICENSE*  # Adjust if present
-%{_bindir}/qemu-system-x86_64
-%dir %{qemu_moddir}
-%{qemu_moddir}/*.so
-%exclude %{qemu_moddir}/*usb*host*.so
-%exclude %{qemu_moddir}/*usb*redir*.so
-%exclude %{qemu_moddir}/*virtio-gpu*pci*.so
-%exclude %{qemu_moddir}/*virtio-gpu-ccw*.so
-%exclude %{qemu_moddir}/*virtio-gpu*.so
-%exclude %{qemu_moddir}/*virtio-vga*.so
+%files
+%defattr(-,root,root,-)
+/usr/local/bin/
+/usr/local/libexec/
+/usr/local/share
+/usr/local/include
 
-%files -n qemu-img
-%{_bindir}/qemu-img
-
-%files -n qemu-kvm-device-usb-host
-%{qemu_moddir}/*usb*host*.so
-
-%files -n qemu-kvm-device-usb-redirect
-%{qemu_moddir}/*usb*redir*.so
-
-%files -n qemu-kvm-device-display-virtio-gpu
-%exclude %{qemu_moddir}/*virtio-gpu*pci*.so
-%exclude %{qemu_moddir}/*virtio-gpu-ccw*.so
-%{qemu_moddir}/*virtio-gpu*.so
-
-%files -n qemu-kvm-device-display-virtio-vga
-%{qemu_moddir}/*virtio-vga*.so
-
-%files -n qemu-kvm-device-display-virtio-gpu-pci
-%{qemu_moddir}/*virtio-gpu*pci*.so
-
-%ifarch s390x
-%files -n qemu-kvm-device-display-virtio-gpu-ccw
-%{qemu_moddir}/*virtio-gpu-ccw*.so
-%endif
-
-%files -n qemu-pr-helper
-%{_bindir}/qemu-pr-helper
 
 
 %doc

@@ -16,46 +16,55 @@ Packaging the latest (at time of writing) version of qemu that is not available 
 
 %global __strip /usr/bin/true
 
-# --- Subpackages (minimal) ---
+# --- Subpackages (minimal with Summaries) ---
 
 %package -n qemu-kvm-core
+Summary: QEMU KVM system core
 %description -n qemu-kvm-core
 Core KVM-enabled QEMU system binary and common modules.
 
 %package -n qemu-img
+Summary: QEMU disk image utility
 %description -n qemu-img
-qemu-img utility.
+qemu-img utility for creating and converting disk images.
 
 %package -n qemu-kvm-device-usb-host
+Summary: QEMU USB host device modules
 %description -n qemu-kvm-device-usb-host
-USB host passthrough modules.
+Modules enabling host USB passthrough.
 
 %package -n qemu-kvm-device-usb-redirect
+Summary: QEMU USB redirection modules
 %description -n qemu-kvm-device-usb-redirect
-USB redirection modules.
+Modules enabling USB redirection (usbredir).
 
 %package -n qemu-kvm-device-display-virtio-gpu
+Summary: QEMU virtio-gpu display modules
 %description -n qemu-kvm-device-display-virtio-gpu
-Virtio-GPU display modules.
+Virtio-GPU display device backend modules.
 
 %package -n qemu-kvm-device-display-virtio-vga
+Summary: QEMU virtio-vga display modules
 %description -n qemu-kvm-device-display-virtio-vga
-Virtio-VGA display modules.
+Virtio-VGA display device modules.
 
 %package -n qemu-kvm-device-display-virtio-gpu-pci
+Summary: QEMU virtio-gpu PCI variant modules
 %description -n qemu-kvm-device-display-virtio-gpu-pci
-Virtio-GPU PCI variant modules.
+PCI variant modules for virtio-gpu display devices.
 
 %ifarch s390x
 %package -n qemu-kvm-device-display-virtio-gpu-ccw
+Summary: QEMU virtio-gpu CCW modules (s390x)
 %description -n qemu-kvm-device-display-virtio-gpu-ccw
-Virtio-GPU CCW display modules (s390x).
+CCW transport virtio-gpu display modules for s390x.
 %endif
 
-# Optional (only if you build it):
 %package -n qemu-pr-helper
+Summary: QEMU persistent reservation helper
 %description -n qemu-pr-helper
-Persistent reservation helper.
+Helper for SCSI persistent reservations (qemu-pr-helper).
+
 
 
 

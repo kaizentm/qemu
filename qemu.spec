@@ -8,6 +8,11 @@ URL:            https://www.qemu.org
 Source0:        qemu-%{version}.tar.xz
 
 BuildRequires:  gtk2-devel
+BuildRequires:  python3-tomli
+BuildRequires: libiscsi-devel
+
+Requires: libiscsi
+
 BuildArch:      x86_64
 
 %description
@@ -46,6 +51,7 @@ rm -rf $RPM_BUILD_ROOT
 /usr/local/libexec/
 /usr/local/share
 /usr/local/include
+/usr/local/lib64/
 
 
 

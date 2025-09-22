@@ -87,7 +87,20 @@ rm -rf $RPM_BUILD_ROOT
 %{_bindir}/qemu-vmsr-helper
 %{_libexecdir}/qemu-bridge-helper
 %{_datadir}/qemu
-
+%{_bindir}/elf2dmp
+/usr/include/qemu-plugin.h
+/usr/lib/debug/usr/bin/elf2dmp-10.1.50.mshv.v4-1.el9.x86_64.debug
+/usr/share/applications/qemu.desktop
+/usr/share/icons/hicolor/128x128/apps/qemu.png
+/usr/share/icons/hicolor/16x16/apps/qemu.png
+/usr/share/icons/hicolor/24x24/apps/qemu.png
+/usr/share/icons/hicolor/256x256/apps/qemu.png
+/usr/share/icons/hicolor/32x32/apps/qemu.bmp
+/usr/share/icons/hicolor/32x32/apps/qemu.png
+/usr/share/icons/hicolor/48x48/apps/qemu.png
+/usr/share/icons/hicolor/512x512/apps/qemu.png
+/usr/share/icons/hicolor/64x64/apps/qemu.png
+/usr/share/icons/hicolor/scalable/apps/qemu.svg
 
 
 %doc

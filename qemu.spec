@@ -74,12 +74,23 @@ rm -rf $RPM_BUILD_ROOT
 # --- Files sections ---
 
 %files
-%defattr(-,root,root,-)
-/usr/local/bin/
-/usr/local/libexec/
-/usr/local/share
-/usr/local/include
-/usr/local/lib64/
+%license COPYING COPYING.LIB
+%doc README.rst
+%{_bindir}/qemu-system-x86_64
+%{_bindir}/qemu-img
+%{_bindir}/qemu-nbd
+%{_bindir}/qemu-pr-helper
+%{_bindir}/qemu-storage-daemon
+%{_bindir}/qemu-io
+%{_bindir}/qemu-ga
+%{_bindir}/qemu-edid
+%{_bindir}/qemu-keymap
+%{_bindir}/qemu-vmsr-helper
+%{_libexecdir}/qemu-bridge-helper
+%{_datadir}/qemu
+%{_mandir}/man1/qemu*.1*
+%{_mandir}/man7/qemu*.7*
+%{_mandir}/man8/qemu*.8*
 
 
 

@@ -77,7 +77,6 @@ rm -rf $RPM_BUILD_ROOT
 /usr/local/libexec/
 /usr/local/share
 /usr/local/include
-/usr/local/lib64/
 
 
 

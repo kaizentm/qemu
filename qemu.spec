@@ -54,15 +54,13 @@ Packaging the latest (at time of writing) version of qemu that is not available 
 
 %build
 ./configure \
-  --prefix=/usr \
-  --libdir=%{_libdir} \
-  --target-list=x86_64-softmmu \
-  --enable-mshv \
-  --disable-gtk \
-  --disable-xen \
-  --disable-vnc-jpeg \
-  --enable-libiscsi
-make -j%{?_smp_build_ncpus}
+    --target-list=x86_64-softmmu \
+    --disable-xen \
+    --disable-vnc-jpeg \
+    --enable-mshv \
+    --disable-gtk
+cd build
+make -j
 
 %install
 export DESTDIR=$RPM_BUILD_ROOT
@@ -74,33 +72,13 @@ rm -rf $RPM_BUILD_ROOT
 # --- Files sections ---
 
 %files
-%license COPYING COPYING.LIB
-%doc README.rst
-%{_bindir}/qemu-system-x86_64
-%{_bindir}/qemu-img
-%{_bindir}/qemu-nbd
-%{_bindir}/qemu-pr-helper
-%{_bindir}/qemu-storage-daemon
-%{_bindir}/qemu-io
-%{_bindir}/qemu-ga
-%{_bindir}/qemu-edid
-%{_bindir}/qemu-vmsr-helper
-%{_libexecdir}/qemu-bridge-helper
-%{_datadir}/qemu
-%{_bindir}/elf2dmp
-/usr/include/qemu-plugin.h
-/usr/lib/debug/usr/bin/elf2dmp-10.1.50.mshv.v4-1.el9.x86_64.debug
-/usr/share/applications/qemu.desktop
-/usr/share/icons/hicolor/128x128/apps/qemu.png
-/usr/share/icons/hicolor/16x16/apps/qemu.png
-/usr/share/icons/hicolor/24x24/apps/qemu.png
-/usr/share/icons/hicolor/256x256/apps/qemu.png
-/usr/share/icons/hicolor/32x32/apps/qemu.bmp
-/usr/share/icons/hicolor/32x32/apps/qemu.png
-/usr/share/icons/hicolor/48x48/apps/qemu.png
-/usr/share/icons/hicolor/512x512/apps/qemu.png
-/usr/share/icons/hicolor/64x64/apps/qemu.png
-/usr/share/icons/hicolor/scalable/apps/qemu.svg
+%defattr(-,root,root,-)
+/usr/local/bin/
+/usr/local/libexec/
+/usr/local/share
+/usr/local/include
+/usr/local/lib64/
+
 
 
 %doc

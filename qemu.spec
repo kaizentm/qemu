@@ -84,13 +84,9 @@ rm -rf $RPM_BUILD_ROOT
 %{_bindir}/qemu-io
 %{_bindir}/qemu-ga
 %{_bindir}/qemu-edid
-%{_bindir}/qemu-keymap
 %{_bindir}/qemu-vmsr-helper
 %{_libexecdir}/qemu-bridge-helper
 %{_datadir}/qemu
-%{_mandir}/man1/qemu*.1*
-%{_mandir}/man7/qemu*.7*
-%{_mandir}/man8/qemu*.8*
 
 
 

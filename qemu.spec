@@ -47,13 +47,13 @@ Packaging the latest (at time of writing) version of qemu that is not available 
 %prep
 %setup -q -n %{name}-%{version}
 
-%global __strip /usr/bin/true
-
 
 
 
 %build
 ./configure \
+    --prefix=/usr \
+    --libdir=%{_libdir} \
     --target-list=x86_64-softmmu \
     --disable-xen \
     --disable-vnc-jpeg \
@@ -72,14 +72,12 @@ rm -rf $RPM_BUILD_ROOT
 # --- Files sections ---
 
 %files
-%defattr(-,root,root,-)
-/usr/local/bin/
-/usr/local/libexec/
-/usr/local/share
-/usr/local/include
+%license COPYING COPYING.LIB
+%doc README.rst
+%{_bindir}/
+%{_libexecdir}/
+/usr/share
+/usr/include
+{_libdir}/libiscsi.so.*
 
 
-
-%doc
-
-%changelog

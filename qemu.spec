@@ -1,7 +1,7 @@
 Name:           qemu
 Version:        10.1.50.mshv.v4
 Release:        1%{?dist}
-Summary:        QEMU the FAST! processor emulator
+Summary:        QEMU with MSHV patch
 
 License:        GPLv2+
 URL:            https://www.qemu.org
@@ -68,7 +68,6 @@ make install
 rm -rf $RPM_BUILD_ROOT
 
 # --- Files sections ---
-
 %files
 %defattr(-,root,root,-)
 %license COPYING COPYING.LIB

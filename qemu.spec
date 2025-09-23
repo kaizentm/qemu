@@ -76,8 +76,8 @@ rm -rf $RPM_BUILD_ROOT
 %doc README.rst
 %{_bindir}/
 %{_libexecdir}/
-/usr/share
-/usr/include
+/usr/share/
+/usr/include/
 {_libdir}/libiscsi.so.*
 
 

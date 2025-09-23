@@ -78,6 +78,6 @@ rm -rf $RPM_BUILD_ROOT
 %{_libexecdir}/
 /usr/share/
 /usr/include/
-{_libdir}/libiscsi.so.*
+/{_libdir}/libiscsi.so.*
 
 

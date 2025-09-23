@@ -17,7 +17,6 @@ BuildRequires: pixman-devel
 BuildRequires: zlib-devel 
 BuildRequires: libfdt-devel 
 BuildRequires: libaio-devel 
-BuildRequires: libiscsi-devel 
 BuildRequires: liburing-devel 
 BuildRequires: libseccomp-devel 
 BuildRequires: libcap-ng-devel 
@@ -56,7 +55,8 @@ Packaging the latest (at time of writing) version of qemu that is not available 
     --disable-xen \
     --disable-vnc-jpeg \
     --enable-mshv \
-    --disable-gtk
+    --disable-gtk \
+    --disable-libiscsi
 cd build
 make -j
 

@@ -1,5 +1,5 @@
 Name:           qemu
-Version:        10.1.50.mshv.v4
+Version:        10.1.50.mshv.v5
 Release:        1%{?dist}
 Summary:        QEMU with MSHV patch
 

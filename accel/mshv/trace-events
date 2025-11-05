@@ -19,10 +19,10 @@ mshv_commit_msi_routing_table(int vm_fd, int len) "vm_fd=%d table_size=%d"
 mshv_register_irqfd(int vm_fd, int event_fd, uint32_t gsi) "vm_fd=%d event_fd=%d gsi=%d"
 mshv_irqchip_update_irqfd_notifier_gsi(int event_fd, int resample_fd, int virq, bool add) "event_fd=%d resample_fd=%d virq=%d add=%d"
 
-mshv_insn_fetch(uint64_t addr, size_t size) "gpa=0x%lx size=%lu"
-mshv_mem_write(uint64_t addr, size_t size) "\tgpa=0x%lx size=%lu"
-mshv_mem_read(uint64_t addr, size_t size) "\tgpa=0x%lx size=%lu"
-mshv_map_memory(uint64_t userspace_addr, uint64_t gpa, uint64_t size) "\tu_a=0x%lx gpa=0x%010lx size=0x%08lx"
-mshv_unmap_memory(uint64_t userspace_addr, uint64_t gpa, uint64_t size) "\tu_a=0x%lx gpa=0x%010lx size=0x%08lx"
-mshv_set_phys_mem(bool add, const char *name, uint64_t gpa) "\tadd=%d name=%s gpa=0x%010lx"
-mshv_handle_mmio(uint64_t gva, uint64_t gpa, uint64_t size, uint8_t access_type) "\tgva=0x%lx gpa=0x%010lx size=0x%lx access_type=%d"
+mshv_insn_fetch(uint64_t addr, size_t size) "gpa=0x%" PRIx64 " size=%zu"
+mshv_mem_write(uint64_t addr, size_t size) "\tgpa=0x%" PRIx64 " size=%zu"
+mshv_mem_read(uint64_t addr, size_t size) "\tgpa=0x%" PRIx64 " size=%zu"
+mshv_map_memory(uint64_t userspace_addr, uint64_t gpa, uint64_t size) "\tu_a=0x%" PRIx64 " gpa=0x%010" PRIx64 " size=0x%08" PRIx64
+mshv_unmap_memory(uint64_t userspace_addr, uint64_t gpa, uint64_t size) "\tu_a=0x%" PRIx64 " gpa=0x%010" PRIx64 " size=0x%08" PRIx64
+mshv_set_phys_mem(bool add, const char *name, uint64_t gpa) "\tadd=%d name=%s gpa=0x%010" PRIx64
+mshv_handle_mmio(uint64_t gva, uint64_t gpa, uint64_t size, uint8_t access_type) "\tgva=0x%" PRIx64 " gpa=0x%010" PRIx64 " size=0x%" PRIx64 " access_type=%d"
